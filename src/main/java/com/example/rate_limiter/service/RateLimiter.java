@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 @Service
 @RequiredArgsConstructor
 public class RateLimiter {
-    @Value("${public_api.req_limit_per_min}")
+    @Value("${public_api.req_limit_per_min:2}")
     private long requestLimitPerMin;
 
     private final ProxyManager<String> proxyManager;

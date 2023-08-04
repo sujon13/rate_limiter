@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} [%t] %clr(%logger){cyan} %line - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } [%t] %logger %line - %msg%n"
+  logback:
+    rollingpolicy:
+      file-name-pattern: D:\\server\log\rate_limiter\%d{yyyy-MM-dd-HH-mm}.%i.log # will create log file per minute
+      max-history: 7
+      max-file-size: 10MB
+  file:
+    name: D:\\server\log\rate_limiter\log.log
+  level:
+    com:
+      dgt:
+        nbr: debug
+
+spring:
+  output:
+    ansi:
+      enabled: always
