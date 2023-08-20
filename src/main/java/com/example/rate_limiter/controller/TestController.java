@@ -18,7 +18,7 @@ public class TestController {
 
     @GetMapping("/test")
     public ResponseEntity<?> test(HttpServletRequest request) {
-        log.info(request.getRequestURI());
+        log.info("Api Request: " + request.getRequestURI());
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(RestResponse.ofSuccess("Congrats! You have successfully received response", "success"));

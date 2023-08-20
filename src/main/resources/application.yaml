@@ -3,7 +3,7 @@ server:
 
 logging:
   pattern:
-    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} [%t] %clr(%logger){cyan} %line - %msg%n"
+    # console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} [%t] %clr(%logger){cyan} %line - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } [%t] %logger %line - %msg%n"
   logback:
     rollingpolicy:
